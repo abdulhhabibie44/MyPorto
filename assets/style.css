@@ -1,0 +1,262 @@
+body {
+            background-color: #0a0a0a;
+            color: #ffffff;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-section {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card-title, .card-text{
+            color: #fff;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 10px 0;
+            transition: all 0.3s ease;
+        }
+
+        .skill-item:hover {
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        .accent-color {
+            color: #00ff88;
+        }
+
+        .btn-custom {
+            background: linear-gradient(45deg, #00ff88, #00ffcc);
+            border: none;
+            color: #000;
+            font-weight: 600;
+            padding: 12px 30px;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-custom:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+        }
+
+        /* Tambahkan style untuk background coding */
+        .about-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .code-background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 0.05;
+            z-index: 0;
+            background-image: url('testimonial-bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            filter: invert(1);
+            pointer-events: none;
+        }
+
+        .about-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Scroll to Top Button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: linear-gradient(45deg, #00ff88, #00ffcc);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #000;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 255, 136, 0.3);
+        }
+
+        .scroll-to-top.active {
+            opacity: 1;
+            visibility: visible;
+            bottom: 30px;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
+            color: #000;
+        }
+
+        /* Tools Section Styles */
+        .tools-section {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(rgba(10, 10, 10, 0.7), rgba(10, 10, 10, 0.7)),
+                        url('blog-bg.png');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .tools-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.05);
+            pointer-events: none;
+        }
+
+        .tools-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tool-item {
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .tool-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .tool-icon {
+            font-size: 4rem;
+            margin-bottom: 15px;
+            background: linear-gradient(45deg, #00ff88, #00ffcc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .tool-name {
+            font-weight: 600;
+            color: #fff;
+        }
+
+        /* Contact Section Styles Update */
+        .contact-item {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .contact-item:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .contact-icon {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            color: #00ff88;
+        }
+
+        .contact-label {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .contact-value {
+            font-size: 0.9rem;
+            color: #ffffff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-value:hover {
+            color: #00ff88;
+        }
+
+        /* Container untuk contact cards */
+        .contact-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 768px) {
+            .contact-item {
+                padding: 15px;
+            }
+
+            .contact-icon {
+                font-size: 1.75rem;
+            }
+
+            .contact-label {
+                font-size: 0.9rem;
+            }
+
+            .contact-value {
+                font-size: 0.85rem;
+            }
+        }
+
+        .hire-btn {
+            padding: 15px 40px;
+            font-size: 1.2rem;
+            margin-top: 30px;
+        }
+
+        /* Update Contact Section Spacing */
+        #contact.section {
+            padding-top: 60px;  /* Mengurangi padding top dari 100px */
+        }
+
+        #contact h2.mb-5 {
+            margin-bottom: 2rem !important;  /* Mengurangi margin bottom dari heading */
+        }
+
+        @media (max-width: 768px) {
+            #contact.section {
+                padding-top: 40px;  /* Lebih kecil lagi untuk mobile */
+            }
+
+            #contact h2.mb-5 {
+                margin-bottom: 1.5rem !important;
+            }
+        }
